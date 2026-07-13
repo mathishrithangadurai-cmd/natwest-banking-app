@@ -119,7 +119,7 @@ function handleSave() {
     const totalAmountInput = document.getElementById('totalAmount');
     const totalAmount = totalAmountInput.value;
 
-    if (totalAmount === '₹0' || totalAmount === '') {
+    if (totalAmount === '£0' || totalAmount === '') {
         alert('Please enter an amount before saving');
         return;
     }
@@ -173,7 +173,7 @@ function handleFinalSave() {
     // Save transaction
     const totalAmountInput = document.getElementById('totalAmount');
     const totalInWordsInput = document.getElementById('totalInWords');
-    const totalAmount = totalAmountInput.value.replace('₹', '').replace(/,/g, '');
+    const totalAmount = totalAmountInput.value.replace('£', '').replace(/,/g, '');
 
     const form = document.getElementById('cashDepositForm') || 
                  document.getElementById('chequeDepositForm') ||
@@ -272,7 +272,7 @@ function saveTransaction(transaction) {
 }
 
 function formatCurrency(amount) {
-    return '₹' + parseInt(amount).toLocaleString('en-IN');
+    return '£' + parseInt(amount).toLocaleString('en-IN');
 }
 
 function numberToWords(num) {

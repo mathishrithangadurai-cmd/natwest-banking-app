@@ -22,7 +22,7 @@ function setCurrentUsername(username) {
 
 // Format amount to INR currency
 function formatCurrency(amount) {
-    return '₹' + parseInt(amount).toLocaleString('en-IN');
+    return '£' + parseInt(amount).toLocaleString('en-IN');
 }
 
 // Convert number to words (Indian format)

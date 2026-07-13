@@ -20,7 +20,7 @@ A fully functional static banking website built with vanilla JavaScript, HTML5, 
   - **Transaction History** - View all past transactions with status badges
 
 ### 💵 Deposit Services
-- **Cash Deposit** - Multiple denomination inputs (₹10, ₹20, ₹50, ₹100)
+- **Cash Deposit** - Multiple denomination inputs (£10, £20, £50, £100)
 - **Cheque Deposit** - Flexible quantity and amount entry
 - Real-time calculation with automatic word conversion (Indian numbering system)
 - Branch code validation (6-digit format)
@@ -34,9 +34,9 @@ A fully functional static banking website built with vanilla JavaScript, HTML5, 
 
 ### 📊 Advanced Calculations
 - **Currency Converter**: Converts rupees to Indian numbering system
-  - Example: ₹370 = "Three Hundred Seventy Rupees Only"
+  - Example: £370 = "Three Hundred Seventy Rupees Only"
   - Supports up to 100 trillion (Kharab)
-  - Proper handling of Lakh (₹100,000) and Crore (₹10,000,000)
+  - Proper handling of Lakh (£100,000) and Crore (£10,000,000)
 
 ### 📝 Transaction Management
 - Complete transaction history with timestamps
@@ -95,7 +95,7 @@ natwest-banking-app/
 │   │   └── validation.js     # Input validation logic
 │   │
 │   └── assets/
-│       └── logo.svg          # NatWest logo (₹ centered)
+│       └── logo.svg          # NatWest logo (£ centered)
 │
 ├── README.md                  # This file
 ├── GITHUB_SETUP.md           # GitHub deployment guide
@@ -160,7 +160,7 @@ Sample transaction structure:
 ### Test Scenarios
 1. **Login Flow**: Enter username and password, verify dashboard loads
 2. **Deposit**: Try cash deposit with various denomination combinations
-3. **Word Conversion**: Verify ₹370 converts to "Three Hundred Seventy Rupees Only"
+3. **Word Conversion**: Verify £370 converts to "Three Hundred Seventy Rupees Only"
 4. **Token Generation**: Check token format (NW + timestamp + random)
 5. **Transaction History**: Verify transactions appear after save
 6. **Cancel Transaction**: Test cancellation and status update

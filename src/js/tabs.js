@@ -69,7 +69,7 @@ function getTransactions() {
 }
 
 function formatCurrency(amount) {
-    return '₹' + parseInt(amount).toLocaleString('en-IN');
+    return '£' + parseInt(amount).toLocaleString('en-IN');
 }
 
 function cancelTransaction(transactionId) {
