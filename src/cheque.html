@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <title>Cheque Details</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Cheque Details</h1>
+        <form id="cheque-form">
+            <div class="form-group">
+                <label for="cheque-number">Number of Cheques:</label>
+                <input type="number" id="cheque-number" name="cheque-number" required>
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" required>
+            </div>
+            <div class="form-buttons">
+                <button type="reset" class="btn reset-btn">Reset</button>
+                <button type="submit" class="btn save-btn">Save</button>
+            </div>
+        </form>
+    </div>
+    <script src="js/forms.js"></script>
+</body>
+</html>

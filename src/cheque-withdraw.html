@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NatWest - Cheque Withdraw</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="mini-header">
+            <a href="withdraw.html" class="home-icon">
+                <i class="fas fa-arrow-left"></i> Back
+            </a>
+            <h1>Cheque Withdraw Details</h1>
+            <a href="index.html" class="home-icon">
+                <i class="fas fa-home"></i>
+            </a>
+        </header>
+
+        <form id="chequeWithdrawForm" class="form-container">
+            <!-- Account Details (Read-only) -->
+            <div class="form-section">
+                <h2>Account Information</h2>
+                
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input type="text" id="name" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Account Number:</label>
+                    <input type="text" value="12345678" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Sort Code:</label>
+                    <input type="text" value="123456" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Date:</label>
+                    <input type="text" id="currentDate" readonly>
+                </div>
+            </div>
+
+            <!-- Cheque Details -->
+            <div class="form-section">
+                <h2>Cheque Details</h2>
+                
+                <div class="form-group">
+                    <label for="chequeAmount">Amount (₹):</label>
+                    <input type="number" id="chequeAmount" min="0" placeholder="Enter amount" required>
+                </div>
+            </div>
+
+            <!-- Total Amount Display -->
+            <div class="form-section">
+                <div class="form-group">
+                    <label>Total Amount:</label>
+                    <div class="total-container">
+                        <input type="text" id="totalAmount" readonly placeholder="₹0">
+                        <input type="text" id="totalInWords" readonly placeholder="Zero Rupees Only" class="amount-in-words">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Branch Code -->
+            <div class="form-section" id="branchCodeSection" style="display:none;">
+                <h2>Branch Code Verification</h2>
+                <div class="form-group">
+                    <label for="branchCode">Branch Code (6 digits):</label>
+                    <input type="text" id="branchCode" maxlength="6" placeholder="Enter 6-digit branch code" pattern="[0-9]{6}">
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="form-actions">
+                <button type="button" class="btn btn-secondary" id="resetBtn">
+                    <i class="fas fa-sync-alt"></i> Reset
+                </button>
+                <button type="button" class="btn btn-primary" id="saveBtn">
+                    <i class="fas fa-save"></i> Save
+                </button>
+                <button type="button" class="btn btn-warning" id="editBtn" style="display:none;">
+                    <i class="fas fa-edit"></i> Edit
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Token Popup -->
+    <div id="tokenPopup" class="popup" style="display:none;">
+        <div class="popup-content">
+            <h2>Transaction Successful</h2>
+            <p>Your Token Number:</p>
+            <div class="token-number" id="tokenNumber"></div>
+            <button type="button" class="btn btn-primary" id="okBtn">OK</button>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/validation.js"></script>
+</body>
+</html>
