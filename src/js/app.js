@@ -25,9 +25,9 @@ function formatCurrency(amount) {
     return '£' + parseInt(amount).toLocaleString('en-IN');
 }
 
-// Convert number to words (Indian format)
+// Convert number to words (British format)
 function numberToWords(num) {
-    if (num === 0) return 'Zero Rupees Only';
+    if (num === 0) return 'Zero Pounds Only';
 
     const ones = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
     const tens = ['', '', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
@@ -60,7 +60,7 @@ function numberToWords(num) {
     let words = '';
     let groupIndex = 0;
     
-    // Handle in groups of 2 digits for Indian system (except first group which is 3 digits)
+    // Handle in groups of 2 digits for British system (except first group which is 3 digits)
     let groups = [];
     if (num >= 1000) {
         // Get the last 3 digits
@@ -93,7 +93,7 @@ function numberToWords(num) {
         }
     }
 
-    return (words.trim() || 'Zero') + ' Rupees Only';
+    return (words.trim() || 'Zero') + ' Pounds Only';
 }
 
 // Generate token number
